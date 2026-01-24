@@ -1,0 +1,12 @@
+# Ignore common development files
+.DS_Store
+.env
+*.log
+node_modules/
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore OS generated files
+Thumbs.db
