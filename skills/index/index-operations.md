@@ -6,6 +6,8 @@
 
 - [`process-doc-levels`](../process/process-doc-levels.md)
 - [`process-doc-updates`](../process/process-doc-updates.md)
+- [`Process: Skill Granularity`](../process/process-skills-granularity.md)
+- [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
 
 ## Protocols
 
