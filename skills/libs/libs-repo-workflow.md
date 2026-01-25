@@ -1,6 +1,7 @@
 ---
 title: libs-repo-workflow
-tags: [#libs]
+tags:
+  - "#libs"
 dependencies: []
 mcp_resource: true
 updated_at: 2026-01-24

@@ -1,6 +1,7 @@
 ---
 title: libs-policy
-tags: [#libs]
+tags:
+  - "#libs"
 dependencies: []
 mcp_resource: true
 updated_at: 2026-01-24

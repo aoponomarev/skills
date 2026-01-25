@@ -1,6 +1,7 @@
 ---
-title: Process: Skills Lifecycle
-tags: [#process]
+title: "Process: Skills Lifecycle"
+tags:
+  - "#process"
 dependencies: []
 mcp_resource: true
 updated_at: 2026-01-24

@@ -1,6 +1,7 @@
 ---
 title: protocol-commit
-tags: [#protocols]
+tags:
+  - "#protocols"
 dependencies: []
 mcp_resource: true
 updated_at: 2026-01-24

@@ -1,6 +1,8 @@
 ---
-title: Process: SSOT and Cross-Links
-tags: [#process, #ssot]
+title: "Process: SSOT and Cross-Links"
+tags:
+  - "#process"
+  - "#ssot"
 dependencies: []
 mcp_resource: true
 updated_at: 2026-01-24

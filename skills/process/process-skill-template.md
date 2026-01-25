@@ -1,6 +1,8 @@
 ---
-title: Process: Skill Template
-tags: [#process, #skills]
+title: "Process: Skill Template"
+tags:
+  - "#process"
+  - "#skills"
 dependencies: []
 mcp_resource: true
 updated_at: 2026-01-24
