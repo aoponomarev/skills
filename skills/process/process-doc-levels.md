@@ -1,3 +1,11 @@
+---
+title: process-doc-levels
+tags: [#process]
+dependencies: []
+mcp_resource: true
+updated_at: 2026-01-24
+---
+
 # process-doc-levels
 
 > Источник: `docs/doc-rules.md` (иерархия уровней документирования)

@@ -1,3 +1,11 @@
+---
+title: libs-repo-workflow
+tags: [#libs]
+dependencies: []
+mcp_resource: true
+updated_at: 2026-01-24
+---
+
 # libs-repo-workflow
 
 > Источник: `docs/doc-lib-github.md` (протокол работы с libs-репозиторием)

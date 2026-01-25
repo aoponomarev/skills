@@ -1,3 +1,11 @@
+---
+title: libs-policy
+tags: [#libs]
+dependencies: []
+mcp_resource: true
+updated_at: 2026-01-24
+---
+
 # libs-policy
 
 > Источник: `docs/doc-lib-vue.md` (принцип приоритета библиотек)

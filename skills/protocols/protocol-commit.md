@@ -1,3 +1,11 @@
+---
+title: protocol-commit
+tags: [#protocols]
+dependencies: []
+mcp_resource: true
+updated_at: 2026-01-24
+---
+
 # protocol-commit
 
 > Источник: `.cursorrules` (протокол по командам "комить", "закомить" и т.п.)

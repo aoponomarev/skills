@@ -1,3 +1,11 @@
+---
+title: process-doc-updates
+tags: [#process]
+dependencies: []
+mcp_resource: true
+updated_at: 2026-01-24
+---
+
 # process-doc-updates
 
 > Источник: `docs/doc-rules.md` (когда и как обновлять документацию)
