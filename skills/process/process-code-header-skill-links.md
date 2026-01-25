@@ -24,6 +24,7 @@ updated_at: 2026-01-25
 - **No duplication**: Do not re-state full rules in the header if they already live in Skills.
 - **Keep it short**: Header explains purpose; details live in Skills.
 - **Exceptions**: Small local scripts or trivial utilities can skip links.
+- **Avoid multi-source drift**: If a rule changes, update the Skill first, then the header link (not the header text).
 
 ## Workflow
 1) Identify whether the header describes reusable rules or architecture.
