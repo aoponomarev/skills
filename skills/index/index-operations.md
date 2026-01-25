@@ -17,6 +17,7 @@ updated_at: 2026-01-24
 - [`Process: Skill Template`](../process/process-skill-template.md)
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
 - [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
+- [`Process: SSOT and Cross-Links`](../process/process-ssot-crosslinks.md)
 
 ## Protocols
 
