@@ -10,6 +10,7 @@
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
 - [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
 - [`Process: SSOT and Cross-Links`](../process/process-ssot-crosslinks.md)
+- [`Process: Code Header Skill Links`](../process/process-code-header-skill-links.md)
 
 ## Protocols
 
