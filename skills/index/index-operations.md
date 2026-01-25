@@ -1,11 +1,3 @@
----
-title: index-operations
-tags: [#index, #operations]
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-24
----
-
 # Index: Operations Skills
 
 > Навигационный индекс по операционным skills
