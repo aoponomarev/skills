@@ -36,7 +36,7 @@ Management of Skill candidates from capture to publication.
 ## References
 - `skills/BACKLOG.md`
 - `skills-mbb/BACKLOG.md`
-- `MBB/SKILL_TEMPLATE.md`
+- `skills/process/process-skill-template.md`
 
 ## Metadata
 - tags: #process #skills #governance
