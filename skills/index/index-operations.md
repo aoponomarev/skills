@@ -4,14 +4,15 @@
 
 ## Process
 
+- [`Template: n8n Skill Drafter`](../process/n8n-drafter-template.md)
 - [`Process: Agent Commands`](../process/process-agent-commands.md)
 - [`Process: Code Header Skill Links`](../process/process-code-header-skill-links.md)
 - [`process-doc-levels`](../process/process-doc-levels.md)
 - [`Process: Documentation Style`](../process/process-doc-style.md)
 - [`process-doc-updates`](../process/process-doc-updates.md)
+- [`Process: n8n & MCP Integration`](../process/process-n8n-mcp-integration.md)
 - [`Process: Skill Template`](../process/process-skill-template.md)
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
-- [`Process: n8n & MCP Integration`](../process/process-n8n-mcp-integration.md)
 - [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
 - [`Process: SSOT and Cross-Links`](../process/process-ssot-crosslinks.md)
 
