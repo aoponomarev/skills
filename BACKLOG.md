@@ -20,3 +20,4 @@ _Пока пусто. Добавляйте новых кандидатов зд�
 ## ✅ Archive (Recently Promoted)
 
 _Список недавно перенесенных в основной реестр skills._
+- [status=promoted] title="process-skills-scope-routing" | scope="Правила распределения между skills/ и skills-mbb/ + протокол перемещения" | tags=[process, ssot] | source="routing-skill" | priority="medium"

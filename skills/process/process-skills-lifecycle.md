@@ -1,7 +1,7 @@
 ---
 title: Skills Lifecycle Management
 tags: [#process, #skills, #automation]
-dependencies: [process-skill-template, process-n8n-mcp-integration]
+dependencies: [process-skill-template, process-n8n-mcp-integration, process-skills-scope-routing]
 mcp_resource: true
 updated_at: 2026-01-26
 ---
@@ -115,4 +115,5 @@ n8n маршрутизирует задачу к соответствующем�
 ## References
 - `process-skill-template.md`
 - `process-n8n-mcp-integration.md`
+- `process-skills-scope-routing.md`
 - `MBB/SKILLS_MASTER_ROADMAP.md`
