@@ -13,7 +13,7 @@
 - [`Process: n8n & MCP Integration`](../process/process-n8n-mcp-integration.md)
 - [`Process: Skill Template`](../process/process-skill-template.md)
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
-- [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
+- [`Skills Lifecycle Management`](../process/process-skills-lifecycle.md)
 - [`Process: SSOT and Cross-Links`](../process/process-ssot-crosslinks.md)
 
 ## Protocols
