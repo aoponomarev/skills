@@ -1,44 +1,118 @@
 ---
-title: "Process: Skills Lifecycle"
-tags:
-  - "#process"
-dependencies: []
+title: Skills Lifecycle Management
+tags: [#process, #skills, #automation]
+dependencies: [process-skill-template, process-n8n-mcp-integration]
 mcp_resource: true
-updated_at: 2026-01-24
+updated_at: 2026-01-26
 ---
 
-# Process: Skills Lifecycle
+# Skills Lifecycle Management
 
-## Title
-Management of Skill candidates from capture to publication.
+> Skills — это "гены" нашего приложения. Их здоровье определяет качество всей системы.
 
-## Scope
-- Identifying new Skill candidates from work results.
-- Buffer management via `BACKLOG.md`.
-- Promotion of candidates to permanent registry.
+## Lifecycle Operations
 
-## When to Use
-- After completing a task that introduced a new pattern, rule, or integration.
-- When an existing skill needs splitting or significant updating.
+| Action | Описание | Триггер |
+|--------|----------|---------|
+| **CREATE** | Создание нового Skill | Выявлен новый паттерн/правило |
+| **UPDATE** | Обновление существующего | Skill устарел или неполон |
+| **MERGE** | Объединение Skills | Дублирование контента |
+| **SPLIT** | Разделение Skill | Превышен размер (>150 строк) |
+| **DEPRECATE** | Архивация | Skill больше не актуален |
+| **REVALIDATE** | Проверка актуальности | Код изменился |
 
-## Key Rules
-- **Capture**: Agents must analyze task summaries for reusable patterns.
-- **Backlog First**: Never create a skill file directly without human approval; add to `BACKLOG.md` first.
-- **Human Gate**: Only the USER can promote a candidate to a file.
-- **SSOT**: If a pattern is general, it goes to `skills/`; if project-specific, to `skills-mbb/`.
+## BACKLOG Protocol
 
-## Workflow
-1) **Analyze**: Review the completed task. Is there something reusable?
-2) **Draft**: Add a short entry to the "Candidates" section in the relevant `BACKLOG.md`.
-3) **Notify**: Inform the USER about the new candidate.
-4) **Wait**: Proceed with file creation only after USER confirms the candidate is ready for "Promotion".
-5) **Promote**: Create the `.md` file using `SKILL_TEMPLATE.md` and move the backlog entry to "Archive".
+### Формат записи
+```
+- [action=<action>] [status=pending] title="<Title>" | scope="<Scope>" | 
+  skill_id="<existing_id>" | changes="<description>" | 
+  tags=[tag1, tag2] | priority="<low|medium|high|critical>" | 
+  context="<cursor_context>" | timestamp=<ISO8601>
+```
+
+### Примеры
+
+**CREATE:**
+```
+- [action=create] [status=pending] title="cache-invalidation-rules" | 
+  scope="Правила инвалидации кэша при изменении данных" | 
+  tags=[cache, core-systems] | priority="high" | 
+  context="При работе с fetchPortfolio обнаружена неочевидная логика инвалидации" |
+  timestamp=2026-01-26T15:00:00Z
+```
+
+**UPDATE:**
+```
+- [action=update] [status=pending] skill_id="cache-strategy" | 
+  changes="Добавить раздел о TTL для разных типов данных" | 
+  priority="medium" | timestamp=2026-01-26T15:00:00Z
+```
+
+**MERGE:**
+```
+- [action=merge] [status=pending] source="cache-keys,cache-versioning" | 
+  target="cache-management" | priority="low" | timestamp=2026-01-26T15:00:00Z
+```
+
+**DEPRECATE:**
+```
+- [action=deprecate] [status=pending] skill_id="old-api-integration" | 
+  reason="API больше не используется, заменен на новую интеграцию" | 
+  priority="low" | timestamp=2026-01-26T15:00:00Z
+```
+
+## Workflow Stages
+
+### 1. Capture (Cursor Agent)
+Cursor Agent работает с кодом и выявляет потребности:
+- "Это должен быть Skill" → `action=create`
+- "Skill X устарел" → `action=update`
+- "Skills A и B дублируются" → `action=merge`
+
+### 2. Queue (BACKLOG.md)
+Все предложения попадают в единую очередь с приоритизацией.
+
+### 3. Process (n8n + Background Agent)
+n8n маршрутизирует задачу к соответствующему workflow:
+- Drafter → генерация черновика
+- Updater → патч существующего
+- Composer → merge/split
+- Archiver → перемещение в archive/
+
+### 4. Review (drafts/)
+Черновик ожидает проверки в `drafts/` со статусом:
+- `[status=draft]` — ожидает review
+- `[status=approved]` — одобрен к публикации
+- `[status=rejected]` — отклонен с причиной
+
+### 5. Publish (Human Approval Required)
+После одобрения:
+1. Файл перемещается в `skills/`
+2. Индексы обновляются
+3. Git commit + push
+4. Уведомление о публикации
+
+## Quality Gates
+
+| Gate | Проверка |
+|------|----------|
+| **Front-matter** | YAML валиден, все поля заполнены |
+| **Size** | < 150 строк (4 экрана) |
+| **Links** | Все ссылки резолвятся |
+| **Dependencies** | Зависимые Skills существуют |
+| **Uniqueness** | Нет дублирования с существующими |
+
+## Metrics
+
+| Метрика | Цель |
+|---------|------|
+| Coverage | >80% ключевых модулей |
+| Freshness | <30 дней для критичных Skills |
+| Automation | >50% через автоматизацию |
+| Approval Time | <24h |
 
 ## References
-- `skills/BACKLOG.md`
-- `skills-mbb/BACKLOG.md`
-- `skills/process/process-skill-template.md`
-
-## Metadata
-- tags: #process #skills #governance
-- updated_at: 2026-01-24
+- `process-skill-template.md`
+- `process-n8n-mcp-integration.md`
+- `MBB/SKILLS_MASTER_ROADMAP.md`
