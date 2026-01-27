@@ -17,6 +17,7 @@
 - [`Skills Lifecycle Management`](../process/process-skills-lifecycle.md)
 - [`Skills Scope Routing (skills vs skills-mbb)`](../process/process-skills-scope-routing.md)
 - [`Process: SSOT and Cross-Links`](../process/process-ssot-crosslinks.md)
+- [`Process: Windows + Docker Path Handling`](../process/process-windows-docker-paths.md)
 
 ## Protocols
 
