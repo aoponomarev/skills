@@ -1,14 +1,16 @@
 ---
+id: process-multi-agent-collaboration
 title: Multi-Agent Collaboration Protocol
-tags: [#process, #agents, #collaboration]
-dependencies: [process-skills-lifecycle, process-n8n-mcp-integration]
-mcp_resource: true
+scope: process
+tags: [process, agents, collaboration]
+priority: high
+created_at: 2026-01-26
 updated_at: 2026-01-26
 ---
 
 # Multi-Agent Collaboration Protocol
 
-## Purpose
+## Overview
 Обеспечить эффективное разделение труда между ИИ-агентами разных типов для поддержания здоровья системы Skills.
 
 ## Agent Roles
@@ -31,8 +33,9 @@ updated_at: 2026-01-26
   - Выполняет рутинные проверки (ссылки, теги, структура).
   - Проводит фоновый аудит кода на соответствие Skills.
 
-## Collaboration Workflow
+## Steps
 
+### Collaboration Workflow
 1. **Discovery (Cursor)**: В ходе работы Cursor понимает: "Это общее правило".
 2. **Tasking (Cursor)**: Cursor вызывает `propose_skill` (через MCP), передавая краткую суть и сложный контекст.
 3. **Orchestration (n8n)**: n8n видит задачу, запускает фонового агента (Continue/Ollama).
@@ -40,17 +43,17 @@ updated_at: 2026-01-26
 5. **Human Gate**: Человек проверяет черновик.
 6. **Integration**: После одобрения навык становится частью организма.
 
-## Context Passing Rules
+### Context Passing Rules
 Cursor Agent ДОЛЖЕН передавать в поле `context`:
 - Специфические технические решения, которые сложно "додумать".
 - Ссылки на конкретные файлы кода.
 - Примеры ошибок или успешных решений.
 
-## Quality Assurance
+## Validation
 - Фоновый агент раз в сутки проверяет все Skills на "протухание" (Staleness).
 - Если код в MBB значительно изменился, а Skill — нет, агент создает задачу `action=revalidate`.
 
-## References
+## Related Skills
 - `process-skills-lifecycle.md`
 - `process-n8n-mcp-integration.md`
 - `BACKLOG.md`
