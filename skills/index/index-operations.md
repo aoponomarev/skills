@@ -4,6 +4,7 @@
 
 ## Process
 
+- [`protocol-command-omk`](../process/protocol-command-omk.md)
 - [`Template: n8n Skill Drafter`](../process/n8n-drafter-template.md)
 - [`Process: Agent Commands`](../process/process-agent-commands.md)
 - [`Process: Code Header Skill Links`](../process/process-code-header-skill-links.md)
