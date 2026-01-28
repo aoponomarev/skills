@@ -4,7 +4,6 @@
 
 ## Process
 
-- [`protocol-command-omk`](../process/protocol-command-omk.md)
 - [`Template: n8n Skill Drafter`](../process/n8n-drafter-template.md)
 - [`Process: Agent Commands`](../process/process-agent-commands.md)
 - [`Process: Code Header Skill Links`](../process/process-code-header-skill-links.md)
@@ -19,6 +18,7 @@
 - [`Skills Scope Routing (skills vs skills-mbb)`](../process/process-skills-scope-routing.md)
 - [`Process: SSOT and Cross-Links`](../process/process-ssot-crosslinks.md)
 - [`Process: Windows + Docker Path Handling`](../process/process-windows-docker-paths.md)
+- [`Протокол команды ОМК (Ответь Максимально Кратко)`](../process/protocol-command-omk.md)
 
 ## Protocols
 
