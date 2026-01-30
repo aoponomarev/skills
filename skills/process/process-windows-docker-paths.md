@@ -69,7 +69,7 @@ docker stop container; if ($?) { docker start container }
 ### 4. Пробелы в путях
 ```bash
 # НЕПРАВИЛЬНО (Cursor Shell может не понять):
-cd "d:\Clouds\AO\OneDrive\Portfolio - CV\..."
+cd "d:\Clouds\AO\OneDrive\Portfolio-CV\..."
 
 # ПРАВИЛЬНО: Использовать working_directory параметр
 # или относительные пути без пробелов
