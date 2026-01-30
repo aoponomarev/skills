@@ -12,6 +12,7 @@
 - [`process-doc-updates`](../process/process-doc-updates.md)
 - [`Multi-Agent Collaboration Protocol`](../process/process-multi-agent-collaboration.md)
 - [`Process: n8n & MCP Integration`](../process/process-n8n-mcp-integration.md)
+- [`Управление путями в проекте (ЕЕИИПП)`](../process/process-paths-management.md)
 - [`Process: Skill Template`](../process/process-skill-template.md)
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
 - [`Skills Lifecycle Management`](../process/process-skills-lifecycle.md)
