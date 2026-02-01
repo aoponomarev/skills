@@ -15,6 +15,7 @@
 - [`Process: Paths Management (`ЕИП`)`](../process/process-paths-management.md)
 - [`Template: Skill Structure`](../process/process-skill-template.md)
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
+- [`Process: Skills Language Policy`](../process/process-skills-language-policy.md)
 - [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
 - [`Process: Scope Routing`](../process/process-skills-scope-routing.md)
 - [`Process: SSOT & Cross-Links`](../process/process-ssot-crosslinks.md)
