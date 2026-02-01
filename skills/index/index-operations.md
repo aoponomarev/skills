@@ -1,13 +1,3 @@
----
-id: index-operations
-title: Index: Operations Skills
-scope: skills
-tags: [#index, #operations, #process]
-priority: high
-created_at: 2026-01-24
-updated_at: 2026-02-01
----
-
 # Index: Operations Skills
 
 > **Context**: Map of processes, protocols, and workflows.
