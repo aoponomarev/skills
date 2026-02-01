@@ -1,122 +1,41 @@
 ---
-title: "Process: Windows + Docker Path Handling"
-tags: [#process, #docker, #windows, #troubleshooting]
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-27
+id: process-windows-docker-paths
+title: Process: Windows Docker Paths
+scope: skills
+tags: [#process, #docker, #windows, #paths]
+priority: high
+created_at: 2026-01-27
+updated_at: 2026-02-01
 ---
 
-# Process: Windows + Docker Path Handling
+# Process: Windows Docker Paths
 
-## Scope
-- Особенности работы с Docker на Windows через различные shell.
-- Преобразование путей в Git Bash.
-- Корректное использование docker exec и docker cp.
+> **Context**: Fixing path conversion issues in Git Bash/Windows.
+> **Problem**: Git Bash converts `/` to `C:/Program Files/Git/...`.
 
-## When to Use
-- При ошибках вида "No such file or directory" с путями типа `C:/Program Files/Git/...`
-- При работе с Docker из Git Bash на Windows.
-- При написании кросс-платформенных скриптов автоматизации.
+## 1. The Fix
+Use **PowerShell** or escape paths for complex Docker commands.
 
-## Key Rules
-
-### 1. Git Bash преобразует Unix-пути
-Git Bash автоматически конвертирует пути, начинающиеся с `/`, в Windows-пути:
-
+## 2. Patterns
+### Git Bash
 ```bash
-# ЧТО ВЫ ВВОДИТЕ:
+# Bad (Converts path)
 docker exec container cat /home/node/file.txt
 
-# ЧТО GIT BASH ПЕРЕДАЕТ В DOCKER:
-docker exec container cat C:/Program Files/Git/home/node/file.txt
-```
-
-### 2. Решения
-
-#### Вариант A: Использовать PowerShell
-```bash
-powershell -Command "docker exec container cat /home/node/file.txt"
-```
-
-#### Вариант B: Двойной слэш
-```bash
+# Good (Escape)
 docker exec container cat //home/node/file.txt
+# Or
+MSYS_NO_PATHCONV=1 docker exec ...
 ```
 
-#### Вариант C: Переменная MSYS_NO_PATHCONV
-```bash
-MSYS_NO_PATHCONV=1 docker exec container cat /home/node/file.txt
-```
-
-#### Вариант D: Использовать cmd
-```bash
-cmd //c "docker exec container cat /home/node/file.txt"
-```
-
-### 3. Команды с && в PowerShell
-PowerShell не поддерживает `&&` для цепочки команд:
-
+### PowerShell (Recommended)
 ```powershell
-# НЕПРАВИЛЬНО:
-docker stop container && docker start container
-
-# ПРАВИЛЬНО (PowerShell 7+):
-docker stop container; if ($?) { docker start container }
-
-# ИЛИ отдельные вызовы
+docker exec container cat /home/node/file.txt
 ```
 
-### 4. Пробелы в путях
-```bash
-# НЕПРАВИЛЬНО (Cursor Shell может не понять):
-cd "d:\Clouds\AO\OneDrive\Portfolio-CV\..."
+## 3. Common Issues
+- **`chmod` fails**: Path not found? Use PowerShell wrapper.
+- **`find` fails**: Path conversion messes up arguments.
 
-# ПРАВИЛЬНО: Использовать working_directory параметр
-# или относительные пути без пробелов
-```
-
-## Примеры типичных проблем
-
-### Проблема: chmod не работает
-```bash
-# Git Bash:
-docker exec n8n chmod 666 /home/node/.n8n/database.sqlite
-# Ошибка: chmod: C:/Program Files/Git/home/node/.n8n/database.sqlite: No such file
-
-# Решение через PowerShell:
-powershell -Command "docker exec n8n chmod 666 /home/node/.n8n/database.sqlite"
-```
-
-### Проблема: docker cp с абсолютным путем
-```bash
-# Из Git Bash (может сломаться):
-docker cp n8n:/home/node/.n8n/file.txt ./local-file.txt
-
-# Безопаснее через PowerShell для сложных путей
-```
-
-### Проблема: find в Docker
-```bash
-# Git Bash преобразует -name patterns:
-docker exec container find /home -name "*.txt"
-# Может сломаться!
-
-# Через PowerShell:
-powershell -Command "docker exec container find /home -name '*.txt'"
-```
-
-## Рекомендуемый подход
-
-1. **Для простых команд** без путей — Git Bash работает нормально
-2. **Для команд с путями внутри контейнера** — использовать PowerShell wrapper
-3. **Для скриптов автоматизации** — всегда через PowerShell для кросс-платформенности
-
-## References
-- [MSYS Path Conversion](https://www.msys2.org/docs/filesystem-paths/)
-- [Docker on Windows](https://docs.docker.com/desktop/windows/)
-
-## Metadata
-- tags: #process #docker #windows #troubleshooting #git-bash
-- dependencies: []
-- updated_at: 2026-01-27
-- source_refs: []
+## 4. Rule
+For cross-platform scripts, prefer **PowerShell** or Node.js (`child_process`) over raw Bash scripts on Windows.

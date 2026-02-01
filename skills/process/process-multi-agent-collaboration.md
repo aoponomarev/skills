@@ -1,59 +1,35 @@
 ---
 id: process-multi-agent-collaboration
-title: Multi-Agent Collaboration Protocol
-scope: process
-tags: [process, agents, collaboration]
+title: Process: Multi-Agent Collaboration
+scope: skills
+tags: [#process, #agents, #collaboration]
 priority: high
 created_at: 2026-01-26
-updated_at: 2026-01-26
+updated_at: 2026-02-01
 ---
 
-# Multi-Agent Collaboration Protocol
+# Process: Multi-Agent Collaboration
 
-## Overview
-Обеспечить эффективное разделение труда между ИИ-агентами разных типов для поддержания здоровья системы Skills.
+> **Context**: Division of labor between Cursor (Active) and Continue (Background) agents.
 
-## Agent Roles
+## 1. Roles
 
-### 1. Cursor Agent (Primary / Active)
-- **Характер**: Быстрый, контекстно-зависимый, решает текущие задачи.
-- **Роль**: Архитектор и "Захватчик" (Capture).
-- **Задачи**:
-  - Выявляет новые паттерны в процессе кодинга.
-  - Определяет, когда навык устарел или требует разделения.
-  - Пишет высокоуровневые задания в `BACKLOG.md` (action=create/update/merge).
-  - Описывает сложные архитектурные нюансы в поле `context`.
+### Cursor Agent (Architect/Capture)
+- **Fast, Context-Aware**.
+- **Task**: Writes code, identifies patterns, creates `BACKLOG` entries.
+- **Output**: `action=create` in `BACKLOG.md`.
 
-### 2. Continue Agent (Background / Headless)
-- **Характер**: Методичный, неспешный, работает в фоне.
-- **Роль**: "Писатель" (Drafter) и "Аудитор" (Auditor).
-- **Задачи**:
-  - Берет задания из `BACKLOG.md`.
-  - Генерирует детальный контент по шаблонам.
-  - Выполняет рутинные проверки (ссылки, теги, структура).
-  - Проводит фоновый аудит кода на соответствие Skills.
+### Continue Agent (Drafter/Auditor)
+- **Slow, Methodical**.
+- **Task**: Reads `BACKLOG`, drafts Skills, validates links.
+- **Output**: `.md` files in `drafts/`.
 
-## Steps
+## 2. Workflow
+1.  **Discovery**: Cursor spots a reusable pattern.
+2.  **Capture**: Cursor adds to `BACKLOG.md`.
+3.  **Draft**: Background agent (script/n8n) picks up task and writes Draft.
+4.  **Review**: Human approves.
+5.  **Publish**: Skill enters system.
 
-### Collaboration Workflow
-1. **Discovery (Cursor)**: В ходе работы Cursor понимает: "Это общее правило".
-2. **Tasking (Cursor)**: Cursor вызывает `propose_skill` (через MCP), передавая краткую суть и сложный контекст.
-3. **Orchestration (n8n)**: n8n видит задачу, запускает фонового агента (Continue/Ollama).
-4. **Processing (Continue)**: Фоновый агент превращает "суть" в "ген" (Skill file) в папке `drafts/`.
-5. **Human Gate**: Человек проверяет черновик.
-6. **Integration**: После одобрения навык становится частью организма.
-
-### Context Passing Rules
-Cursor Agent ДОЛЖЕН передавать в поле `context`:
-- Специфические технические решения, которые сложно "додумать".
-- Ссылки на конкретные файлы кода.
-- Примеры ошибок или успешных решений.
-
-## Validation
-- Фоновый агент раз в сутки проверяет все Skills на "протухание" (Staleness).
-- Если код в MBB значительно изменился, а Skill — нет, агент создает задачу `action=revalidate`.
-
-## Related Skills
-- `process-skills-lifecycle.md`
-- `process-n8n-mcp-integration.md`
-- `BACKLOG.md`
+## 3. File Map
+- `@BACKLOG.md`: The Handoff Point.

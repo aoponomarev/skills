@@ -1,31 +1,32 @@
 ---
-title: libs-policy
-tags:
-  - "#libs"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-24
+id: libs-policy
+title: Libs: Usage Policy
+scope: skills
+tags: [#libs, #policy, #vue, #dependencies]
+priority: medium
+created_at: 2026-01-24
+updated_at: 2026-02-01
 ---
 
-# libs-policy
+# Libs: Usage Policy
 
-> Источник: `docs/doc-lib-vue.md` (принцип приоритета библиотек)
+> **Context**: Rules for choosing between external libraries and custom implementations.
+> **SSOT**: `docs/doc-lib-vue.md`
 
-## Правило приоритета библиотек
+## 1. Core Rule
+**Check Libs First**: Before writing custom modules, check for existing Vue libraries with extensible APIs.
 
-Перед написанием кастомного модуля обязательно проверять наличие подходящей Vue‑библиотеки с расширяемым API.
+## 2. Priority Criteria
+Prefer a library if:
+1.  **Extensible API**: Supports plugins, composables, or config injection.
+2.  **CDN Support**: Works via `<script>` tag without build steps (UMD).
+3.  **Active**: Maintained community support.
 
-## Приоритет библиотек
+## 3. Exceptions (When to Code)
+Write custom modules if:
+1.  **Missing**: No suitable library exists.
+2.  **Bloat**: Library is too heavy for the feature.
+3.  **Business Logic**: Highly specific domain requirements.
 
-Библиотека предпочтительна, если:
-- есть расширяемый API (плагины, composables, кастомизация)
-- работает через CDN без сборки
-- поддерживает кастомизацию под задачи проекта
-- активно поддерживается сообществом
-
-## Исключения
-
-Кастомный модуль допускается, если:
-- библиотека отсутствует или не подходит по функциональности
-- библиотека слишком тяжелая
-- требуется специфичная бизнес‑логика
+## 4. File Map
+- `@core/lib-loader.js`: Loading mechanism.

@@ -1,34 +1,29 @@
 ---
-title: process-doc-updates
-tags:
-  - "#process"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-24
+id: process-doc-updates
+title: Process: Documentation Updates
+scope: skills
+tags: [#process, #documentation, #maintenance]
+priority: medium
+created_at: 2026-01-24
+updated_at: 2026-02-01
 ---
 
-# process-doc-updates
+# Process: Documentation Updates
 
-> Источник: `docs/doc-rules.md` (когда и как обновлять документацию)
+> **Context**: Synchronization of Code and Docs.
 
-## Когда обновлять
+## 1. Trigger
+Update docs IMMEDIATELY when changing:
+- Project structure.
+- Architecture.
+- UI/UX principles.
+- Agent protocols.
 
-Сразу при изменениях в:
-- структуре проекта
-- архитектурных решениях
-- UI/UX принципах
-- правилах ИИ‑агента и протоколах
-- новых сущностях/компонентах/моделях
+## 2. Workflow
+1.  **Code Change**: Modify logic.
+2.  **Doc Check**: Does this violate existing Skills?
+3.  **Doc Update**: Update relevant Skill or create new one via Backlog.
+4.  **Cross-Links**: Verify links remain valid.
 
-## Как обновлять
-
-- обновлять документацию одновременно с кодом
-- проверять согласованность связанных разделов
-- обновлять ссылки при перемещениях
-- соблюдать структуру и оглавления
-
-## Принципы оформления
-
-- модульность и минимализм
-- не дублировать, использовать ссылки
-- для HTML‑тегов использовать угловые скобки ⟨ ⟩
+## 3. Rule
+**Atomic Sync**: Code and Docs updates should ideally be in the same PR/Commit sequence.

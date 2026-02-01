@@ -1,35 +1,33 @@
 ---
-title: "Process: Documentation Style"
-tags:
-  - "#process"
-  - "#documentation"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-25
+id: process-doc-style
+title: Process: Documentation Style
+scope: skills
+tags: [#process, #documentation, #style]
+priority: medium
+created_at: 2026-01-25
+updated_at: 2026-02-01
 ---
 
 # Process: Documentation Style
 
-## Scope
-- Стиль и структура технической документации в Skills.
+> **Context**: "Telegraphic Technical" standard for Skills.
 
-## When to Use
-- При создании или обновлении любого Skill-документа.
-- При переносе информации из кода или старых документов.
+## 1. Style Guide
+- **Tone**: Dry, precise, imperative. No slang.
+- **Structure**:
+  1.  **Context**: What is this?
+  2.  **Rules**: What to do/not do.
+  3.  **Workflow**: Steps.
+  4.  **File Map**: Where to look.
 
-## Key Rules
-- **Техностиль**: сухой, точный, без сленга и метафор.
-- **Структура**: соблюдай нумерацию и единый формат разделов.
-- **Оглавление**: синхронизируй с фактической структурой документа.
-- **Аргументация**: помеченные требования должны сопровождаться коротким обоснованием.
-- **Docs freeze**: не пополняй `docs/`, новые знания — только в Skills или `BACKLOG.md`.
+## 2. Formatting
+- **Lists**: Use numbered lists for sequences, bullets for sets.
+- **Links**: Relative paths `../folder/file.md`.
+- **Argumentation**: Critical rules need a *why* (one sentence).
 
-## Workflow
-1) Определить, какой документ обновляется и его структуру.
-2) Поддерживать единый стиль и формат.
-3) Проверить оглавление и нумерацию.
-4) Добавить аргументацию к критичным правилам.
+## 3. Constraints
+- **Docs Freeze**: No new files in `docs/` (old folder). Use `skills/`.
+- **English**: All new content in English.
 
-## References
-- `skills/skills/process/process-doc-levels.md`
-- `skills/skills/process/process-doc-updates.md`
+## 4. File Map
+- `@skills/process/process-doc-levels.md`: Hierarchy.

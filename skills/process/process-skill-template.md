@@ -1,59 +1,54 @@
 ---
-title: "Process: Skill Template"
-tags:
-  - "#process"
-  - "#skills"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-24
+id: process-skill-template
+title: Template: Skill Structure
+scope: skills
+tags: [#template, #structure, #standard]
+priority: high
+created_at: 2026-01-24
+updated_at: 2026-02-01
 ---
 
-# Process: Skill Template
+# Template: Skill Structure
 
-## Scope
-- Единый шаблон структуры skill-файла.
-- Обязательные разделы и правила оформления.
+> **Context**: Standard layout for all Skills.
 
-## When to Use
-- При создании нового навыка.
-- При приведении старых навыков к стандарту.
+## Structure
 
-## Key Rules
-- **Структура едина**: использовать одинаковые заголовки во всех skill-файлах.
-- **SSOT**: не дублировать правила — ссылаться на базовые навыки.
-- **Краткость**: 2–4 экрана текста на skill-файл.
+```markdown
+---
+id: skill-id-kebab-case
+title: Human Readable Title
+scope: skills (or skills-mbb)
+tags: [#tag1, #tag2]
+priority: medium
+created_at: YYYY-MM-DD
+updated_at: YYYY-MM-DD
+---
 
-## Template
-```
-# Skill Title
+# Human Readable Title
 
-## Scope
-- Что покрывает
-- Что не покрывает
+> **Context**: One-line summary.
+> **SSOT**: Path to source code/config.
 
-## When to Use
-- Триггеры/сигналы
+## 1. Scope / When to Use
+- Triggers.
+- Boundaries.
 
-## Key Rules
-- 3–7 правил, коротко и практично
-- Дубли не допускаются (SSOT)
+## 2. Key Rules / Principles
+- Rule 1.
+- Rule 2.
 
-## Workflow
-1) Шаги
-2) Ветки решений
-3) Условия остановки
+## 3. Workflow / Architecture
+- Step 1.
+- Step 2.
 
-## References
-- Пути к коду
-- Related skills
-- Внешние источники
+## 4. Hard Constraints
+- What is forbidden.
 
-## Metadata
-- tags:
-- dependencies:
-- updated_at:
-- source_refs:
+## 5. File Map
+- `@path/to/file`: Description.
 ```
 
-## References
-- `skills/process/process-skills-granularity.md`
+## Constraints
+- **Granularity**: 1-4 screens max.
+- **SSOT**: Link, don't duplicate.

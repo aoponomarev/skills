@@ -1,39 +1,32 @@
 ---
-title: libs-repo-workflow
-tags:
-  - "#libs"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-24
+id: libs-repo-workflow
+title: Libs: Repo Workflow
+scope: skills
+tags: [#libs, #workflow, #git, #cdn]
+priority: medium
+created_at: 2026-01-24
+updated_at: 2026-02-01
 ---
 
-# libs-repo-workflow
+# Libs: Repo Workflow
 
-> Источник: `docs/doc-lib-github.md` (протокол работы с libs-репозиторием)
+> **Context**: Managing the `libs` repository and dependency updates.
+> **Trigger**: New library needed or version update.
 
-## Когда активируется протокол
+## 1. Triggers
+- Adding a new lib to `LIB_SOURCES`.
+- Version bump.
+- Discrepancy between config and files.
 
-- добавление новой библиотеки
-- обновление версии существующей библиотеки
-- расхождение между `core/lib-loader.js` и фактическими файлами
-- явная команда пользователя
+## 2. Automation Logic
+1.  **Check**: Is file in `libs/<name>/<version>/`?
+2.  **Fetch**: If missing, download UMD from CDN (jsdelivr/cdnjs).
+3.  **Update**: Modify `docs/doc-lib-vue.md` and `core/lib-loader.js`.
+4.  **Notify**: Ask user to commit changes to `libs`.
 
-## Автоматическая активация
+## 3. Constraints
+- **Explicit Commit**: Automation prepares files; User commits.
+- **UMD Only**: Must support browser loading.
 
-Триггеры:
-- добавлен новый элемент в `LIB_SOURCES`
-- изменена версия в `LIB_SOURCES`
-- библиотека отсутствует в `libs`
-
-## Краткий сценарий
-
-1. Проверить наличие файла в `libs/<name>/<version>/`.
-2. Если нет — загрузить UMD‑сборку из CDN (jsdelivr → cdnjs).
-3. Обновить `docs/doc-lib-vue.md` (назначение, версия, источники).
-4. Обновить `core/lib-loader.js` (источники).
-5. Уведомить пользователя о необходимости коммита в `libs`.
-
-## Ограничения
-
-- Коммиты — только по явной команде пользователя.
-- Проверять наличие UMD‑сборки.
+## 4. File Map
+- `@libs/`: The repository.

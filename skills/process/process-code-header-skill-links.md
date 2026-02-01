@@ -1,36 +1,33 @@
 ---
-title: "Process: Code Header Skill Links"
-tags:
-  - "#process"
-  - "#quality"
-  - "#ssot"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-25
+id: process-code-header-skill-links
+title: Process: Code Header Links
+scope: skills
+tags: [#process, #code, #links, #quality]
+priority: medium
+created_at: 2026-01-25
+updated_at: 2026-02-01
 ---
 
-# Process: Code Header Skill Links
+# Process: Code Header Links
 
-## Scope
-- File-level header comments in code that describe module purpose or rules.
-- How to link those headers to the single source of truth in Skills.
+> **Context**: Linking code files to their governing Skills.
 
-## When to Use
-- When a file has a multi-line header comment describing behavior, rules, or architecture.
-- When updating a module and the header might become outdated.
+## 1. Rule
+**Header Link**: Every significant file MUST have a header linking to its Skill SSOT.
 
-## Key Rules
-- **Always link**: Add 1–2 `Skill:` links in the header for the closest matching Skills.
-- **No duplication**: Do not re-state full rules in the header if they already live in Skills.
-- **Keep it short**: Header explains purpose; details live in Skills.
-- **Exceptions**: Small local scripts or trivial utilities can skip links.
-- **Avoid multi-source drift**: If a rule changes, update the Skill first, then the header link (not the header text).
+## 2. Format
+```javascript
+/**
+ * Core Data Logic
+ * @see skills/architecture/A_CORE_DATA_LOGIC.md
+ */
+```
 
-## Workflow
-1) Identify whether the header describes reusable rules or architecture.
-2) Link to existing Skills (or create a backlog entry if missing).
-3) Keep the header summary minimal and accurate.
-4) Update the relevant index file if a new Skill was created.
+## 3. Workflow
+1.  **Identify**: Does this file implement a documented pattern?
+2.  **Link**: Add `@see` link to header.
+3.  **Update**: If Skill moves, update link.
 
-## References
-- `skills/index/index-operations.md`
+## 4. Constraints
+- **Summary Only**: Header explains *what*; Skill explains *why* and *how*.
+- **No Duplication**: Don't copy rules into comments.

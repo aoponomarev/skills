@@ -1,30 +1,26 @@
 ---
 id: protocol-command-omk
-title: "Протокол команды ооммкк (Ответь Максимально Кратко)"
-description_ru: "Режим экстремальной экономии токенов и лаконичности ответов."
-scope: "Коммуникация между пользователем и агентом при активации префикса ооммкк."
-tags: [#protocol, #communication, #tokens]
+title: Protocol: Command OMK (Brevity)
+scope: skills
+tags: [#protocol, #command, #brevity]
 priority: low
 created_at: 2026-01-28
-updated_at: 2026-01-30
+updated_at: 2026-02-01
 ---
 
-# Протокол команды ооммкк (Ответь Максимально Кратко)
+# Protocol: Command OMK (Brevity)
 
-## Формат
-`ооммкк <запрос>`
+> **Command**: `omk` / `ооммкк` ("Answer Maximally Briefly").
+> **Context**: Token-saving mode.
 
-## Действие
-При получении этой команды агент переходит в режим «Титры»:
-1.  **Только суть**: Ответ содержит только запрашиваемую информацию (команду, путь, имя функции).
-2.  **Никакой воды**: Убираются приветствия, подтверждения, контекстные пояснения и примеры «на будущее».
-3.  **Экономия токенов**: Максимально сжатые формулировки без потери технической точности.
+## 1. Behavior
+1.  **Essence Only**: Only the requested command, path, or value.
+2.  **No Fluff**: No "Here is...", "I have done...".
+3.  **Precision**: Technical accuracy preserved.
 
-## Примеры
-*   *Вход*: `ооммкк где лежит конфиг докера?`
-*   *Выход*: `docker-compose.yml`
-*   *Вход*: `ооммкк как перезапустить контейнер?`
-*   *Выход*: `docker-compose restart continue-cli`
+## 2. Examples
+User: `omk where is docker config?`
+Agent: `docker-compose.yml`
 
-## Цепочки
-Может комбинироваться с другими командами: `ооммкк ееиипп`, `ооммкк ааиисс`. В этом случае лаконичность применяется к результатам работы других протоколов.
+## 3. Combinations
+`omk eeiipp`: Brief SSOT check result.

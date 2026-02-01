@@ -1,34 +1,33 @@
 ---
-title: process-doc-levels
-tags:
-  - "#process"
-dependencies: []
-mcp_resource: true
-updated_at: 2026-01-24
+id: process-doc-levels
+title: Process: Documentation Levels
+scope: skills
+tags: [#process, #documentation, #hierarchy]
+priority: medium
+created_at: 2026-01-24
+updated_at: 2026-02-01
 ---
 
-# process-doc-levels
+# Process: Documentation Levels
 
-> Источник: `docs/doc-rules.md` (иерархия уровней документирования)
+> **Context**: Hierarchy of knowledge sources.
+> **Source**: `docs/doc-rules.md`
 
-## Уровень 1: `.cursorrules`
+## Level 1: `.cursorrules` (Root)
+Agent protocols, Git workflow, critical routing.
 
-- правила ИИ‑агента, протоколы, Git‑процессы
+## Level 2: `skills/` & `docs/` (Architecture)
+- **Skills**: Granular "How-To" and constraints.
+- **Docs**: High-level "A_" architecture specs.
 
-## Уровень 2: `docs/`
+## Level 3: File Headers (Context)
+- Purpose of the file.
+- Links to L2 Skills.
 
-- архитектура, компоненты, UI/UX, библиотеки и общие принципы
+## Level 4: Inline Comments (Details)
+- Implementation nuances.
+- Algorithm explanations.
+- Edge cases.
 
-## Уровень 3: шапки файлов
-
-- цель файла, API компонента, особенности реализации
-
-## Уровень 4: комментарии в коде
-
-- конкретные значения, детали реализации, технические нюансы
-
-## Разграничение шаблон/скрипт Vue
-
-- Шапка шаблона: структура HTML, layout, CSS‑классы, слоты, адаптивность
-- Шапка скрипта: API, логика, Bootstrap API, состояние, edge cases
-- Дублирование запрещено, вместо этого — ссылки
+## Rule
+**No Overlap**: L4 should not repeat L2 rules. L3 links to L2.

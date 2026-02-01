@@ -1,15 +1,22 @@
+---
+id: index-architecture
+title: Index: Architecture Skills
+scope: skills
+tags: [#index, #architecture, #map]
+priority: low
+created_at: 2026-01-24
+updated_at: 2026-02-01
+---
+
 # Index: Architecture Skills
 
-> Навигационный индекс по архитектурным skills
+> **Context**: Map of general architectural patterns.
 
 ## Architecture
-
-- _Пока нет skills_
+*(No global architecture skills yet. Project specific are in `skills-mbb`)*
 
 ## Core Systems
-
-- _Пока нет skills_
+*(No global core system skills yet. Project specific are in `skills-mbb`)*
 
 ## Related Indexes
-
-- [`index-operations`](./index-operations.md) - Операционные skills
+- [Index: Operations](./index-operations.md)
