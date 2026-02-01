@@ -1,44 +1,35 @@
----
-id: index-operations
-title: Index: Operations Skills
-scope: skills
-tags: [#index, #operations, #process]
-priority: high
-created_at: 2026-01-24
-updated_at: 2026-02-01
----
-
 # Index: Operations Skills
 
-> **Context**: Map of processes, protocols, and workflows.
+> Навигационный индекс по операционным skills
 
 ## Process
-- [Agent Commands](./../process/process-agent-commands.md)
-- [Code Header Links](./../process/process-code-header-skill-links.md)
-- [Documentation Levels](./../process/process-doc-levels.md)
-- [Documentation Style](./../process/process-doc-style.md)
-- [Documentation Updates](./../process/process-doc-updates.md)
-- [Multi-Agent Collaboration](./../process/process-multi-agent-collaboration.md)
-- [n8n Drafter Template](./../process/n8n-drafter-template.md)
-- [n8n & MCP Integration](./../process/process-n8n-mcp-integration.md)
-- [Paths Management (EEIIPP)](./../process/process-paths-management.md)
-- [Scope Routing](./../process/process-skills-scope-routing.md)
-- [Skill Granularity](./../process/process-skills-granularity.md)
-- [Skills Lifecycle](./../process/process-skills-lifecycle.md)
-- [SSOT & Cross-Links](./../process/process-ssot-crosslinks.md)
-- [Template: Skill Structure](./../process/process-skill-template.md)
-- [Windows Docker Paths](./../process/process-windows-docker-paths.md)
+
+- [`Template: n8n Skill Drafter`](../process/n8n-drafter-template.md)
+- [`Process: Agent Commands`](../process/process-agent-commands.md)
+- [`Process: Code Header Links`](../process/process-code-header-skill-links.md)
+- [`Process: Documentation Levels`](../process/process-doc-levels.md)
+- [`Process: Documentation Style`](../process/process-doc-style.md)
+- [`Process: Documentation Updates`](../process/process-doc-updates.md)
+- [`Process: Multi-Agent Collaboration`](../process/process-multi-agent-collaboration.md)
+- [`Process: n8n & MCP Integration`](../process/process-n8n-mcp-integration.md)
+- [`Process: Paths Management (EEIIPP)`](../process/process-paths-management.md)
+- [`Template: Skill Structure`](../process/process-skill-template.md)
+- [`Process: Skill Granularity`](../process/process-skills-granularity.md)
+- [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
+- [`Process: Scope Routing`](../process/process-skills-scope-routing.md)
+- [`Process: SSOT & Cross-Links`](../process/process-ssot-crosslinks.md)
+- [`Process: Windows Docker Paths`](../process/process-windows-docker-paths.md)
+- [`Protocol: Command OMK (Brevity)`](../process/protocol-command-omk.md)
 
 ## Protocols
-- [Command OMK](./../process/protocol-command-omk.md)
-- [Git Commit](./../protocols/protocol-commit.md)
+
+- [`Protocol: Git Commit`](../protocols/protocol-commit.md)
 
 ## Libraries
-- [Usage Policy](./../libs/libs-policy.md)
-- [Repo Workflow](./../libs/libs-repo-workflow.md)
 
-## Security
-- [Secrets Hygiene](./../security/skill-secrets-hygiene.md)
+- [`Libs: Usage Policy`](../libs/libs-policy.md)
+- [`Libs: Repo Workflow`](../libs/libs-repo-workflow.md)
 
 ## Related Indexes
-- [Index: Architecture](./index-architecture.md)
+
+- [`index-architecture`](./index-architecture.md) - Архитектурные skills
