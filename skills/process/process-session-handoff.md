@@ -5,12 +5,13 @@ scope: skills
 tags: [#process, #session, #backup, #sync, #handoff]
 priority: high
 created_at: 2026-02-01
-updated_at: 2026-02-01
+updated_at: 2026-02-02
 ---
 
 # Process: Session Handoff & Auto-Backup
 
 > **Context**: Protocol for ensuring all local changes (settings, secrets, logs) are synced to OneDrive before closing the session.
+> **Master Skill**: See `skills-mbb/process/process-settings-sync` for unified sync protocol (Cursor + Continue + Project).
 
 ## 1. Triggers
 This protocol is activated by semantic triggers such as:
@@ -21,16 +22,18 @@ This protocol is activated by semantic triggers such as:
 
 ## 2. Handoff Ritual (The Steps)
 
-### Step 1: Sync Infrastructure Settings
+### Step 1: Sync ALL Settings to Cloud
 Check for local modifications in:
-- `settings.json` / `keybindings.json`
-- `.env`
-- `.continue/config.yaml`
+- Cursor: `settings.json`, `keybindings.json`
+- Continue: `config.yaml`, `.continuerc.json`, `.continueignore`
+- Project: `.cursorrules`
+- Secrets: `.env`
 
-**Action**: If local files are newer or modified during the session, run:
+**Action**: Run unified sync:
 ```powershell
 powershell .\scripts\sync-cursor-settings.ps1 backup
 ```
+If `.env` was modified, also copy to `AI/MBB/.env` in OneDrive.
 
 ### Step 2: Update Project Evolution
 Ensure `docs/project-evolution.txt` is updated with the latest technical milestones achieved during the session.
