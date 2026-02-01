@@ -17,6 +17,7 @@
 - [`Process: Skill Granularity`](../process/process-skills-granularity.md)
 - [`Process: Skills Language Policy`](../process/process-skills-language-policy.md)
 - [`Process: Skills Lifecycle`](../process/process-skills-lifecycle.md)
+- [`Process: Session Handoff & Auto-Backup`](../process/process-session-handoff.md)
 - [`Process: Scope Routing`](../process/process-skills-scope-routing.md)
 - [`Process: SSOT & Cross-Links`](../process/process-ssot-crosslinks.md)
 - [`Process: Windows Docker Paths`](../process/process-windows-docker-paths.md)
