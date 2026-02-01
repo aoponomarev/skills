@@ -8,9 +8,9 @@ created_at: 2026-01-28
 updated_at: 2026-02-01
 ---
 
-# Protocol: Command OMK (Brevity)
+# Protocol: Command `ОМК` (Brevity)
 
-> **Command**: `omk` / `ооммкк` ("Answer Maximally Briefly").
+> **Command**: `ОМК` (Answer Maximally Briefly).
 > **Context**: Token-saving mode.
 
 ## 1. Behavior
@@ -19,8 +19,8 @@ updated_at: 2026-02-01
 3.  **Precision**: Technical accuracy preserved.
 
 ## 2. Examples
-User: `omk where is docker config?`
+User: `ОМК where is docker config?`
 Agent: `docker-compose.yml`
 
 ## 3. Combinations
-`omk eeiipp`: Brief SSOT check result.
+`ОМК` + `ЕИП`: Brief SSOT check result.

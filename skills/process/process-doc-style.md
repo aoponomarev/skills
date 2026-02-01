@@ -2,7 +2,7 @@
 id: process-doc-style
 title: Process: Documentation Style
 scope: skills
-tags: [#process, #documentation, #style]
+tags: [#process, #documentation, #style, #cyrillic]
 priority: medium
 created_at: 2026-01-25
 updated_at: 2026-02-01
@@ -24,10 +24,18 @@ updated_at: 2026-02-01
 - **Lists**: Use numbered lists for sequences, bullets for sets.
 - **Links**: Relative paths `../folder/file.md`.
 - **Argumentation**: Critical rules need a *why* (one sentence).
+- **Commands**: Always wrap commands and special terms in backticks: `` `npm install` ``.
 
-## 3. Constraints
+## 3. Special Terminology (Cyrillic Anchors)
+Core protocol commands MUST use Cyrillic abbreviations to serve as distinct semantic anchors, even within English documentation.
+**ALWAYS** wrap them in backticks to prevent Markdown rendering issues.
+
+- **Correct**: `` `ЕИП` ``, `` `ОМК` ``, `` `АИС` ``
+- **Incorrect**: `ЕИП`, `_ОМК_`, `EEIIPP`
+
+## 4. Constraints
 - **Docs Freeze**: No new files in `docs/` (old folder). Use `skills/`.
-- **English**: All new content in English.
+- **English**: All new content in English (except the anchors above).
 
-## 4. File Map
+## 5. File Map
 - `@skills/process/process-doc-levels.md`: Hierarchy.

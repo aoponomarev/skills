@@ -1,17 +1,17 @@
 ---
 id: process-paths-management
-title: Process: Paths Management (EEIIPP)
+title: Process: Paths Management (`ЕИП`)
 scope: skills
-tags: [#process, #paths, #ssot, #eeiipp]
+tags: [#process, #paths, #ssot, #еип]
 priority: high
 created_at: 2026-01-30
 updated_at: 2026-02-01
 ---
 
-# Process: Paths Management (EEIIPP)
+# Process: Paths Management (`ЕИП`)
 
 > **Context**: Portability standards.
-> **Rule**: EEIIPP (Unified Source of Truth / Relative Paths).
+> **Rule**: `ЕИП` (Unified Source of Truth / Relative Paths).
 
 ## 1. Hierarchy
 - **Root**: `STATISTICS_ROOT`

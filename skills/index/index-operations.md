@@ -21,7 +21,7 @@ updated_at: 2026-02-01
 - [Multi-Agent Collaboration](./../process/process-multi-agent-collaboration.md)
 - [n8n Drafter Template](./../process/n8n-drafter-template.md)
 - [n8n & MCP Integration](./../process/process-n8n-mcp-integration.md)
-- [Paths Management (EEIIPP)](./../process/process-paths-management.md)
+- [Paths Management (`ЕИП`)](./../process/process-paths-management.md)
 - [Scope Routing](./../process/process-skills-scope-routing.md)
 - [Skill Granularity](./../process/process-skills-granularity.md)
 - [Skills Lifecycle](./../process/process-skills-lifecycle.md)
@@ -30,7 +30,7 @@ updated_at: 2026-02-01
 - [Windows Docker Paths](./../process/process-windows-docker-paths.md)
 
 ## Protocols
-- [Command OMK](./../process/protocol-command-omk.md)
+- [Command `ОМК`](./../process/protocol-command-omk.md)
 - [Git Commit](./../protocols/protocol-commit.md)
 
 ## Libraries
