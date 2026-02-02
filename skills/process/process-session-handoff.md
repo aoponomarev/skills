@@ -33,7 +33,7 @@ Check for local modifications in:
 ```powershell
 powershell .\scripts\sync-cursor-settings.ps1 backup
 ```
-If `.env` was modified, also copy to `AI/MBB/.env` in OneDrive.
+If `.env` was modified, the Hard Link to `AI/_VAULT/envs/mbb.env` will auto-sync.
 
 ### Step 2: Update Project Evolution
 Ensure `docs/project-evolution.txt` is updated with the latest technical milestones achieved during the session.
