@@ -10,7 +10,7 @@ updated_at: 2026-02-01
 
 # Process: Skills Language Policy
 
-> **Context**: Rules for language separation between Draft and Active skills within the Skills Management Bridge (SMB).
+> **Context**: Rules for language separation between Draft and Active skills within the WorkFlow UI (WF_UI).
 
 ## 1. Core Principle
 The system maintains a strict language boundary based on the skill's lifecycle state:
