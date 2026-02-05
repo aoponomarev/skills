@@ -45,8 +45,8 @@ Generate a `logs/session-report.md` summarizing:
 - Instructions for the next agent (`logs/handoff-note.md`).
 
 ### Step 4: Final Git Sync (MANDATORY)
-Perform a final `git status` check. 
-**CRITICAL**: You are FORBIDDEN from committing changes automatically during the report generation. 
+Perform a final `git status` check.
+**CRITICAL**: You are FORBIDDEN from committing changes automatically during the report generation.
 1.  List all uncommitted changes (code, documentation, skills).
 2.  Draft a suggested commit message.
 3.  **ASK THE USER** for permission to commit: "I have detected uncommitted changes. Should I commit them now?"
