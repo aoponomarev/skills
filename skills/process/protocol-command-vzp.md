@@ -29,6 +29,10 @@ updated_at: 2026-02-05
     - Ensure no regressions in related systems.
 4.  **Fix**: If verification fails, diagnose and fix immediately.
 5.  **Repeat**: Proceed to the next step only after successful verification.
+6.  **Finalize (Evolution Update)**: After completing all steps of the plan:
+    - Summarize technical achievements and architectural changes.
+    - **MANDATORY**: Update `docs/project-evolution.txt` with a concise entry for the current date.
+    - Follow the format and rules defined in `docs/project-evolution.txt`.
 
 ## 3. Resource Management
 - **API Keys**: If a key is missing, search the shared storage/vault before asking the user.
