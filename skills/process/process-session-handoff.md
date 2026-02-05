@@ -44,12 +44,18 @@ Generate a `logs/session-report.md` summarizing:
 - Pending issues (moved to `logs/issues-backlog.md`).
 - Instructions for the next agent (`logs/handoff-note.md`).
 
-### Step 4: Final Git Sync
-Perform a final `git status` check. If there are uncommitted documentation or skill changes, ask the user to "commit and push".
+### Step 4: Final Git Sync (MANDATORY)
+Perform a final `git status` check. 
+**CRITICAL**: You are FORBIDDEN from committing changes automatically during the report generation. 
+1.  List all uncommitted changes (code, documentation, skills).
+2.  Draft a suggested commit message.
+3.  **ASK THE USER** for permission to commit: "I have detected uncommitted changes. Should I commit them now?"
+4.  Only execute `git commit` after explicit confirmation.
 
 ## 3. Hard Constraints
 1.  **No Data Loss**: Never terminate a session if the local `.env` contains new keys that haven't been synced to the cloud backup.
 2.  **Verifiable Sync**: The agent must explicitly state: "✅ Cloud SSOT updated" after a successful backup.
+3.  **No Unsolicited Commits**: Automatic commits during handoff/reporting are strictly prohibited. Always wait for user confirmation.
 
 ## 4. File Map
 - `@scripts/sync-cursor-settings.ps1`: The sync engine.

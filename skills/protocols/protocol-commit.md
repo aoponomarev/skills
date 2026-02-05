@@ -22,8 +22,9 @@ updated_at: 2026-02-01
 
 ## 2. Hard Constraints
 1.  **Explicit Command**: Commit ONLY when explicitly asked ("commit", "save").
-2.  **Atomic**: Do not mix massive refactors with tiny fixes.
-3.  **Safety**: No destructive commands (`reset --hard`, `push -f`) without confirmation.
+2.  **No Auto-Commits in Reports**: During session reporting or `project-evolution.txt` updates, you MUST list changes and ask for permission before committing.
+3.  **Atomic**: Do not mix massive refactors with tiny fixes.
+4.  **Safety**: No destructive commands (`reset --hard`, `push -f`) without confirmation.
 
 ## 3. File Map
 - `@.cursorrules`: Trigger definitions.
