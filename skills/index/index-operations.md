@@ -22,6 +22,7 @@
 - [`Process: SSOT & Cross-Links`](../process/process-ssot-crosslinks.md)
 - [`Process: Windows Docker Paths`](../process/process-windows-docker-paths.md)
 - [`Protocol: Command `ОМК` (Brevity)`](../process/protocol-command-omk.md)
+- [`Protocol: Command `ВЗП` (Planned Execution)`](../process/protocol-command-vzp.md)
 
 ## Protocols
 
