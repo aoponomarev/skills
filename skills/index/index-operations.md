@@ -4,7 +4,6 @@
 
 ## Process
 
-- [`Template: n8n Skill Drafter`](../process/n8n-drafter-template.md)
 - [`Process: Agent Commands`](../process/process-agent-commands.md)
 - [`Process: Code Header Links`](../process/process-code-header-skill-links.md)
 - [`Process: Documentation Levels`](../process/process-doc-levels.md)
