@@ -5,7 +5,7 @@ scope: skills
 tags: [#libs, #workflow, #git, #cdn]
 priority: medium
 created_at: 2026-01-24
-updated_at: 2026-02-01
+updated_at: 2026-02-08
 ---
 
 # Libs: Repo Workflow
@@ -21,7 +21,7 @@ updated_at: 2026-02-01
 ## 2. Automation Logic
 1.  **Check**: Is file in `libs/<name>/<version>/`?
 2.  **Fetch**: If missing, download UMD from CDN (jsdelivr/cdnjs).
-3.  **Update**: Modify `docs/doc-lib-vue.md` and `core/lib-loader.js`.
+3.  **Update**: Modify `core/lib-loader.js`.
 4.  **Notify**: Ask user to commit changes to `libs`.
 
 ## 3. Constraints

@@ -5,7 +5,7 @@ scope: skills
 tags: [#process, #agents, #collaboration]
 priority: high
 created_at: 2026-01-26
-updated_at: 2026-02-01
+updated_at: 2026-02-08
 ---
 
 # Process: Multi-Agent Collaboration
@@ -16,20 +16,20 @@ updated_at: 2026-02-01
 
 ### Cursor Agent (Architect/Capture)
 - **Fast, Context-Aware**.
-- **Task**: Writes code, identifies patterns, creates `BACKLOG` entries.
-- **Output**: `action=create` in `BACKLOG.md`.
+- **Task**: Writes code, identifies patterns, creates Skill Candidates.
+- **Output**: Entries in `events/SKILL_CANDIDATES.json`.
 
 ### Continue Agent (Drafter/Auditor)
 - **Slow, Methodical**.
-- **Task**: Reads `BACKLOG`, drafts Skills, validates links.
-- **Output**: `.md` files in `drafts/`.
+- **Task**: Analyzes candidates, drafts Skills, validates links.
+- **Output**: `.md` files in `drafts/tasks/`.
 
 ## 2. Workflow
 1.  **Discovery**: Cursor spots a reusable pattern.
-2.  **Capture**: Cursor adds to `BACKLOG.md`.
-3.  **Draft**: Background agent (script/n8n) picks up task and writes Draft.
+2.  **Capture**: Cursor adds to `events/SKILL_CANDIDATES.json`.
+3.  **Draft**: n8n V2 Workflows (`V2_NEWS_Swarm`) picks up candidates and writes Draft.
 4.  **Review**: Human approves.
 5.  **Publish**: Skill enters system.
 
 ## 3. File Map
-- `@BACKLOG.md`: The Handoff Point.
+- `@events/SKILL_CANDIDATES.json`: The Handoff Point.

@@ -5,13 +5,12 @@ scope: skills
 tags: [#process, #documentation, #hierarchy]
 priority: medium
 created_at: 2026-01-24
-updated_at: 2026-02-01
+updated_at: 2026-02-08
 ---
 
 # Process: Documentation Levels
 
 > **Context**: Hierarchy of knowledge sources.
-> **Source**: `docs/doc-rules.md`
 
 ## Level 1: `.cursorrules` (Root)
 Agent protocols, Git workflow, critical routing.

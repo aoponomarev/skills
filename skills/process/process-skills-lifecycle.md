@@ -5,7 +5,7 @@ scope: skills
 tags: [#process, #lifecycle, #automation]
 priority: high
 created_at: 2026-01-26
-updated_at: 2026-02-01
+updated_at: 2026-02-08
 ---
 
 # Process: Skills Lifecycle
@@ -13,8 +13,8 @@ updated_at: 2026-02-01
 > **Context**: From Idea to Deprecation.
 
 ## 1. States
-1.  **Pending**: In `BACKLOG.md`.
-2.  **Draft**: In `drafts/` (Review needed).
+1.  **Pending**: In `events/SKILL_CANDIDATES.json`.
+2.  **Draft**: In `drafts/tasks/` (Review needed).
 3.  **Active**: In `skills/` (Published).
 4.  **Deprecated**: In `archive/`.
 
@@ -31,5 +31,5 @@ updated_at: 2026-02-01
 - **Uniqueness**: No overlaps.
 
 ## 4. File Map
-- `@BACKLOG.md`: The Queue.
+- `@events/SKILL_CANDIDATES.json`: The Queue.
 - `@skills/`: The Library.

@@ -5,13 +5,13 @@ scope: skills
 tags: [#libs, #policy, #vue, #dependencies]
 priority: medium
 created_at: 2026-01-24
-updated_at: 2026-02-01
+updated_at: 2026-02-08
 ---
 
 # Libs: Usage Policy
 
 > **Context**: Rules for choosing between external libraries and custom implementations.
-> **SSOT**: `docs/doc-lib-vue.md`
+> **SSOT**: `core/lib-loader.js`
 
 ## 1. Core Rule
 **Check Libs First**: Before writing custom modules, check for existing Vue libraries with extensible APIs.
