@@ -13,6 +13,7 @@
 - [`Process: Multi-Agent Collaboration`](../process/process-multi-agent-collaboration.md)
 - [`Process: n8n & MCP Integration`](../process/process-n8n-mcp-integration.md)
 - [`n8n 2.6.4: OAuth Protocol Security and Webhook Conflict Awareness`](../process/process-n8n-security-oauth-protocols.md)
+- [`n8n Workflow Hygiene: dedup, publish, rollout`](../process/process-n8n-workflow-hygiene.md)
 - [`Node.js v25.6.0 API Preview (Current: v20)`](../process/process-nodejs-v25-api-preview.md)
 - [`Ollama v0.15.6: Auto-download and Context Fixes`](../process/process-ollama-v015-improvements.md)
 - [`Process: Paths Management (`ЕИП`)`](../process/process-paths-management.md)
