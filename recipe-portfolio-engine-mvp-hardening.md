@@ -1,5 +1,11 @@
 # Recipe: Portfolio Engine MVP Hardening
 
+> **References**:
+> - Doc: `MBB/docs/A_PORTFOLIO_SYSTEM.md`
+> - Engine: `MBB/core/domain/portfolio-engine.js`
+> - Validation: `MBB/core/domain/portfolio-validation.js`
+> - MBB skill: `skills-mbb/recipe-portfolio-engine-mvp-hardening.md`
+
 ## When to use
 
 Use this recipe when portfolio allocation/rebalance must stay stable under strict invariants:
