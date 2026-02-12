@@ -31,3 +31,9 @@ updated_at: 2026-02-01
 ## 4. Constraints
 - **Summary Only**: Header explains *what*; Skill explains *why* and *how*.
 - **No Duplication**: Don't copy rules into comments.
+
+## 5. Hotspot Anchors (Meta Extension)
+Header links are minimum baseline. For recurring bug zones, add targeted inline anchors near risky branches.
+
+- See: `skills/skills/process/process-skill-code-loop-anchors.md`
+- Typical hotspots: retry/backoff, fallback, merge/dedup, cache guards, status classification.
