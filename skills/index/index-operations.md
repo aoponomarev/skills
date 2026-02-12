@@ -6,6 +6,8 @@
 
 - [`Process: Agent Commands`](../process/process-agent-commands.md)
 - [`Process: Code Header Links`](../process/process-code-header-skill-links.md)
+- [`Process: Coin Set Merge Consistency`](../process/process-coin-set-merge-consistency.md)
+- [`Process: CoinGecko Top-N on file://`](../process/process-coingecko-file-protocol-topn.md)
 - [`Continue AI v1.2.15: Subagents and Agent Skills`](../process/process-continue-ai-subagents.md)
 - [`Process: Documentation Levels`](../process/process-doc-levels.md)
 - [`Process: Documentation Style`](../process/process-doc-style.md)
@@ -16,8 +18,6 @@
 - [`n8n Workflow Hygiene: dedup, publish, rollout`](../process/process-n8n-workflow-hygiene.md)
 - [`Node.js v25.6.0 API Preview (Current: v20)`](../process/process-nodejs-v25-api-preview.md)
 - [`Ollama v0.15.6: Auto-download and Context Fixes`](../process/process-ollama-v015-improvements.md)
-- [`Process: CoinGecko Top-N on `file://``](../process/process-coingecko-file-protocol-topn.md)
-- [`Process: Coin Set Merge Consistency`](../process/process-coin-set-merge-consistency.md)
 - [`Process: Paths Management (`ЕИП`)`](../process/process-paths-management.md)
 - [`Категоризация релизов: Task vs Skill vs Task&Skill`](../process/process-release-categorization.md)
 - [`Process: Session Handoff & Auto-Backup`](../process/process-session-handoff.md)
